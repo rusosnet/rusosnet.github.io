@@ -1,0 +1,16 @@
+baseURL = 'https://rusos.net'
+languageCode = 'ru-ru'
+title = 'Rusos.net'
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pre = "home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Blog"
+    pre = "blog"
+    url = "/blog"
+    weight = 2

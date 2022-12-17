@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build-tw": "yarn tailwindcss -i ./assets/global.css -o ./assets/global.out.css"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
