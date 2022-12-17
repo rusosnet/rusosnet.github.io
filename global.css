@@ -504,3 +504,21 @@ video {
 .block {
   display: block;
 }
+.p-10 {
+  padding: 2.5rem;
+}
+
+a {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+  text-decoration-line: underline;
+}
+
+a:visited {
+  color: rgb(147 51 234 );
+}
+
+a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
+}
