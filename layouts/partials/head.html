@@ -5,6 +5,6 @@
 {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
 <title>{{ $title }}</title>
 
-{{ $css := resources.Get "global.css" }}
-{{ $style := $css | resources.PostCSS }}
+{{ $css := resources.Get "global.out.css" }}
+{{ $style := $css | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" />

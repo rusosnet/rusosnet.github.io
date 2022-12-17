@@ -3,3 +3,5 @@ resources/_gen
 .hugo_build.lock
 public
 infra/hosts
+hugo.session
+assets/global.out.css

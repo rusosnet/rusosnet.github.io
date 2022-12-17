@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+{{ range $key, $value := .Site.Data.full.tgchannels }}
+
+<div class="mb-5 flex">
+  <div class="mr-2 w-[62px]">
+    <img alt="{{ .name }}" src="{{ .imageURL }}" width="64" class="rounded" />
+  </div>
+  <div class="flex-1">
+    <h5 class="font-bold">{{ .title }}</h5>
+    <a href="https://t.me/{{ .name }}">{{ .name }}</a>
+    <div>
+      {{ .description | markdownify }}
+    </div>
+  </div>
+</div>
+
+{{ end }}
+
+{{ end }}

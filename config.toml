@@ -10,7 +10,7 @@ title = 'Rusos.net'
     weight = 1
 
   [[menu.main]]
-    name = "Blog"
+    name = "TG Каналы"
     pre = "blog"
-    url = "/blog"
+    url = "/tgchannels"
     weight = 2

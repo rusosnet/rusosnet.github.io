@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 a {
-   @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600
+  @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600
+}
+
+h1 {
+  @apply font-bold text-2xl mb-5
 }

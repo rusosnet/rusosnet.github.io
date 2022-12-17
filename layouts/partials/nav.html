@@ -1,9 +1,7 @@
-<div id="nav-border" class="container">
-  <nav id="nav" class="nav justify-content-center">
+<div id="nav-border" class="p-5">
+  <nav id="nav">
   {{ range .Site.Menus.main }}
-    {{ $icon := printf "<i data-feather=\"%s\"></i>" .Pre }}
-    {{ $text := print $icon " " .Name | safeHTML }}
-    <a class="nav-link" href="{{ .URL }}">{{ $text }}</a>
+    <a class="nav-link" href="{{ .URL }}">{{ .Name | safeHTML }}</a>
   {{ end }}
   </nav>
 </div>
