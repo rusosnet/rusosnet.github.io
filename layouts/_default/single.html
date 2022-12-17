@@ -5,4 +5,8 @@
 
 {{ partial "date-and-tags.html" . }}
 
+{{ if .Params.source }}
+<a href="{{ .Params.source }}" rel="nofollow" target="_blank">Источник</a>
+{{ end }}
+
 {{ end }}
