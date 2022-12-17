@@ -2,6 +2,12 @@ baseURL = 'https://rusos.net'
 languageCode = 'ru-ru'
 title = 'Rusos.net'
 
+[params]
+  dateFormat = "Jan 2, 2006"
+
+[taxonomies]
+  tag = "tags"
+
 [menu]
   [[menu.main]]
     name = "Home"
@@ -10,7 +16,13 @@ title = 'Rusos.net'
     weight = 1
 
   [[menu.main]]
+    name = "Новости"
+    pre = "blog"
+    url = "/news/"
+    weight = 2
+
+  [[menu.main]]
     name = "TG Каналы"
     pre = "blog"
-    url = "/tgchannels"
+    url = "/tgchannels/"
     weight = 2
