@@ -8,3 +8,5 @@
 {{ $css := resources.Get "global.out.css" }}
 {{ $style := $css | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+
+{{ template "_internal/google_analytics_async.html" . }}

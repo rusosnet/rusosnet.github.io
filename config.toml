@@ -1,6 +1,7 @@
 baseURL = 'https://rusos.net'
 languageCode = 'ru-ru'
 title = 'Rusos.net'
+googleAnalytics = 342758980
 
 [params]
   dateFormat = "Jan 2, 2006"
