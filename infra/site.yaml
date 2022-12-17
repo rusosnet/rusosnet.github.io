@@ -1,0 +1,49 @@
+- name: Install Docker
+  hosts: all
+  tags: bootstrap
+  become: yes
+  roles:
+    - role: geerlingguy.docker
+  tasks:
+    - name: Install pip
+      apt:
+        name: python3-pip
+        state: present
+
+    - name: Install pip docker
+      pip:
+        name: docker
+
+- name: Install Caddy
+  hosts: web
+  tags: caddy
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: Create a docker network
+      docker_network:
+        name: appnet
+
+    - name: Create config directories
+      file:
+        path: /srv/caddy
+        state: directory
+
+    - name: Copy Caddyfile
+      copy:
+        src: Caddyfile
+        dest: /srv/caddy/Caddyfile
+
+    - name: Run Caddy
+      docker_container:
+        name: caddy
+        image: caddy:2.6
+        restart: yes
+        networks:
+          - name: appnet
+        ports:
+          - "80:80"
+          - "443:443"
+        volumes:
+          - /srv/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+          - /srv/caddy/data:/data

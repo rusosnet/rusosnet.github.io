@@ -2,3 +2,4 @@ node_modules
 resources/_gen
 .hugo_build.lock
 public
+infra/hosts

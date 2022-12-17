@@ -1,0 +1,5 @@
+rusos.net
+
+encode zstd gzip
+
+reverse_proxy https://rusosnet.github.io
