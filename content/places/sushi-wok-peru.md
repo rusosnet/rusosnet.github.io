@@ -1,7 +1,7 @@
 ---
 title: Sushi Wok Perú
 date: 2022-12-18T02:26:22-03
-coords: -34.9084417, -56.145797]
+coords: [-34.9084417, -56.145797]
 source: https://maps.app.goo.gl/vuR4Mi8B5Pg8Jopd6
 tags:
  - Кафе
