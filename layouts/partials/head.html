@@ -9,4 +9,14 @@
 {{ $style := $css | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
-{{ template "_internal/google_analytics_async.html" . }}
+
+{{ if not .Site.Config.Privacy.GoogleAnalytics.Disable }}
+{{ with .Site.GoogleAnalytics -}}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+{{ end }}
+{{ else }}
+{{ end }}
+
+{{ $opts := dict "params" (dict "ga" .Site.Config.Services.GoogleAnalytics) }}
+{{ $js := resources.Get "main.js" | js.Build $opts | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>
