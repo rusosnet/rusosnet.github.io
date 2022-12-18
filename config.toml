@@ -12,7 +12,7 @@ googleAnalytics = "G-RWR8YM3FLL"
 
 [menu]
   [[menu.main]]
-    name = "Home"
+    name = "Главная"
     pre = "home"
     url = "/"
     weight = 1

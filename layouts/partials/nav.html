@@ -1,7 +1,7 @@
 <div id="nav-border" class="p-5">
   <nav id="nav">
   {{ range .Site.Menus.main }}
-    <a class="nav-link" href="{{ .URL }}">{{ .Name | safeHTML }}</a>
+    <a class="inline-block mr-2" href="{{ .URL }}">{{ .Name | safeHTML }}</a>
   {{ end }}
   </nav>
 </div>
