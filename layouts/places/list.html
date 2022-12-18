@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+<div id="map" class="w-full h-96"></div>
+
+{{ $places := slice }}
+
+{{ range .Pages }}
+{{ $places = $places | append (dict
+  "coords" (slice (float (index .Params.coords 0)) (float (index .Params.coords 1)))
+  "name" .Params.title
+  "description" .Plain
+) }}
+{{ end }}
+
+{{ $opts := dict "params" (dict "places" $places) }}
+{{ $turbo := resources.Get "places.js" | js.Build $opts | minify | fingerprint }}
+<script src="{{ $turbo.RelPermalink }}" defer></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLnZw1h5OQ3fHmtgYvpnOMAZ71jx3hN7Q&callback=initMap&v=weekly" data-turbolinks-eval="false" defer></script>
+
+{{ range $key, $value := .Pages.ByPublishDate.Reverse }}
+<p>
+  <a href="{{ .RelPermalink }}" data-jump="{{ $key }}">{{ .Title }}</a>
+  <div>{{ .Summary }}</div>
+</p>
+{{ end }}
+
+{{ end }}

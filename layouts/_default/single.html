@@ -4,6 +4,8 @@
 
 <div class="markdow">{{ .Content }}</div>
 
+{{ partial "map-marker.html" . }}
+
 {{ partial "date-and-tags.html" . }}
 
 {{ if .Params.source }}
