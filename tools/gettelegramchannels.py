@@ -19,7 +19,7 @@ async def main():
                 img_url = '/tgchannels/{}.jpg'.format(data.full_chat.id)
                 img_path = 'static' + img_url
 
-                if os.getenv('SKIP_IMAGES') == '':
+                if os.getenv('SKIP_IMAGES') == None or not os.path.exists(img_path):
                     img = await client.download_media(data.full_chat.chat_photo, file=bytes)
                     PIL.Image.open(io.BytesIO(img)).resize((128, 128)).save(img_path)
 

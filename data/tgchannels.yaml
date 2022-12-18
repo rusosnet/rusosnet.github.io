@@ -4,6 +4,12 @@
 - name: it_in_uy
   description: Чат для айтишников от @rusuru
 
+- name: immigratsiaUruguay
+  description: Обещают помочь Вам с иммиграцией в Уругвай, а также со всеми вопросами, связанными с этим
+
+- name: uruguay_parents
+  description: Группа для русскоговорящих родителей
+
 - name: arendauru
   description: Квартиры от местного русскоговорящего риэлтора
 
@@ -12,6 +18,9 @@
 
 - name: lifehacks_uy
   description: Лайфхаки от @rusuru
+
+- name: espanolgram
+  description: Изучение испанского
 
 - name: snlmp
   description: Персональный блог
