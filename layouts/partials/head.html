@@ -22,3 +22,5 @@
 {{ $opts := dict "params" (dict "ga" .Site.Config.Services.GoogleAnalytics) }}
 {{ $turbo := resources.Get "turbo.js" | js.Build $opts | minify | fingerprint }}
 <script src="{{ $turbo.RelPermalink }}" defer></script>
+
+{{ template "_internal/opengraph.html" . }}
