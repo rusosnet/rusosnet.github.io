@@ -1,6 +1,7 @@
 baseURL = 'https://rusos.net'
 languageCode = 'ru-ru'
-title = 'Rusos.net'
+defaultContentLanguage = 'ru'
+title = 'Rusos.net - Русскоговорящие в Уругвае'
 googleAnalytics = "G-RWR8YM3FLL"
 
 [params]
@@ -20,6 +21,12 @@ googleAnalytics = "G-RWR8YM3FLL"
     name = "Новости"
     pre = "blog"
     url = "/news/"
+    weight = 2
+
+  [[menu.main]]
+    name = "События"
+    pre = "blog"
+    url = "/events/"
     weight = 2
 
   [[menu.main]]
