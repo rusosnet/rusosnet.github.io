@@ -1,6 +1,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+<link rel="icon" href="/favicon.png" />
+
 {{ $title := print .Title " | " .Site.Title }}
 {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
 <title>{{ $title }}</title>
@@ -18,5 +20,5 @@
 {{ end }}
 
 {{ $opts := dict "params" (dict "ga" .Site.Config.Services.GoogleAnalytics) }}
-{{ $js := resources.Get "main.js" | js.Build $opts | minify | fingerprint }}
-<script src="{{ $js.RelPermalink }}" defer></script>
+{{ $turbo := resources.Get "turbo.js" | js.Build $opts | minify | fingerprint }}
+<script src="{{ $turbo.RelPermalink }}" defer></script>
