@@ -14,7 +14,7 @@
 
 {{ if not .Site.Config.Privacy.GoogleAnalytics.Disable }}
 {{ with .Site.GoogleAnalytics -}}
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}" data-turbo-track="reload"></script>
 {{ end }}
 {{ else }}
 {{ end }}
