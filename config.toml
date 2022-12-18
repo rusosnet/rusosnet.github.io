@@ -29,7 +29,13 @@ googleAnalytics = "G-RWR8YM3FLL"
     weight = 3
 
   [[menu.main]]
+    name = "Полезные ссылки"
+    pre = "blog"
+    url = "/links/"
+    weight = 4
+
+  [[menu.main]]
     name = "О проекте"
     pre = "blog"
     url = "/about/"
-    weight = 4
+    weight = 5

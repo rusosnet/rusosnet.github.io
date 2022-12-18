@@ -1,0 +1,150 @@
+- name: Покупки
+  links:
+    - url: https://mercadolibre.com.uy/
+      description: Местное Avito
+    - url: https://montevideo.gub.uy/mapas/ferias
+      description: Местные кочующие рынки
+    - url: https://ferias.uy/?departmentId=10&page=2
+      description: Выбирайте район и увидите расписание. Очень советую, продукты дешевле (большая часть), качество и свежесть запредельное.
+    - url: https://sodimac.com.uy/
+      description: Аналог IKEA или Леруа. Именно аналог, сравнивать не стоит.
+
+- name: Местныe интернет-магазины
+  links:
+    - url: https://loi.com.uy/
+    - url: https://electroventas.com.uy/
+
+- name: Местные интернет-магазины компьютерной техники (и еще чего-то заодно)
+  links:
+    - url: https://www.zonatecno.com.uy/
+    - url: https://www.pccompu.com.uy/
+    - url: https://thotcomputacion.com.uy/
+    - url: https://laaca.com.uy/
+
+- name: Супермаркеты
+  links:
+    - url: https://geant.com.uy
+    - url: https://tiendainglesa.com.uy
+    - url: https://www.devoto.com.uy
+    - url: https://www.disco.com.uy/
+    - url: https://www.elgranero.com.uy
+    - url: https://www.niter.com.uy
+    - url: https://www.bocata.com.uy
+
+- name: Поиск недвижимости
+  links:
+    - url: https://dueñodirecto.com.uy
+    - url: http://inmuebles.com.uy/
+    - url: https://www.remax.com.uy/
+    - url: https://www.gallito.com.uy
+    - url: https://www.infocasas.com.uy
+    - url: https://www.buscandocasa.com
+    - url: https://casasweb.com/
+
+- name: Торги по спец. технике
+  links:
+    - url: https://www.uruguay-mop.com/subastas?p=2&filtersForm=1
+
+- name: Государственные сайты Уругвая
+  links:
+    - url: https://www.gub.uy/organismos/term/2
+      description: Все Министерства Уругвая со ссылками
+    - url: www.mec.gub.uy
+      name: Регистро Сивиль - ЗАГС
+    - url: www.minterior.gub.uy
+      name: Миграсьон
+    - url: www.montevideo.gub.uy
+      name: Муниципалитет Монтевидео
+    - url: http://www.ose.com.uy/clientes/contactenos
+      name: Гос. сан служба
+    - url: https://portal.gub.uy
+      description: Гос. услуги
+    - url: https://extranjeros.gub.uy
+      description: Гос. услуги для иностранцев
+    - url: www.dgi.gub.uy
+      description: Налоговая инспекция
+    - url: www.corteelectoral.gub.uy
+      description: Кортээлектораль
+
+- name: Платёжные сервисы
+  links:
+    - url: https://www.abitab.com.uy/
+    - url: https://www.redpagos.com.uy/#/
+      description: Почти все оплаты через них. Счетчики, билеты, услуги и прочее
+
+- name: Аренда машин
+  links:
+    - url: https://autos.trovit.com.uy/
+    - url: https://www.shoppingdeusados.com.uy/
+
+- name: Междугородний автовокзал
+  links:
+    - url: https://www.trescruces.com.uy/
+
+- name: Связь и интернет
+  links:
+    - url: https://claro.com.uy/personas/
+      description: Самая дешевая мобильная связь и интернет
+    - url: https://www.movistar.es/
+
+- name: Коммунальные платежи
+  links:
+    - url: https://portal.ute.com.uy/
+      description: Здесь же можете выбрать тариф по коммуналке.
+
+- name: Спортивные билеты и развлечения
+  links:
+    - url: https://redtickets.uy/
+    - url: https://tickantel.com.uy/inicio/?2
+    - url: https://www.urubasket.com/
+    - url: https://fibalivestats.dcd.shared.geniussports.com/u/FUBB/2103140/
+    - url: https://el.soccerway.com/
+
+- name: Пресса
+  links:
+    - url: https://www.instagram.com/observadoruy/
+      description: Местная газета
+    - url: https://www.elpais.com.uy/informacion/sociedad
+      description: Местные новости
+
+- name: Медицинские услуги
+  links:
+    - url: https://www.asesp.com.uy/home
+
+- name: Банки
+  links:
+    - url: https://www.itau.com.uy/
+      name: Itaú
+      description: 'Счёт [Cuenta Pocket](https://www.itau.com.uy/inst/cuentapocket.html?utm_source=LandingDebito&utm_medium=LandingDebitoPocket&utm_campaign=LandingDebitoPocket&utm_content=LandingDebitoPocket) в Itaú можно открыть без подтверждения домашнего адреса'
+    - url: https://www.brou.com.uy/
+      name: BROU
+      description: Местный Сбер
+    - url: https://www.prexcard.com/
+      name: Платежная система Prex
+      description: Онлайн регистрация, получение карты в Abitab
+
+- name: В разделах vacunacion места, где можно сделать прививки.
+  links:
+    - url: http://www.montevideo.gub.uy/institucional/noticias/vacunan-en-policlinicas-municipales
+    - url: http://casmu.com.uy/centros-de-vacunacion/
+    - url: http://www.asesp.com.uy/Servicios/Horarios-y-telefonos-de-Interes-uc34
+    - url: http://www.medicauruguaya.com.uy/auc.aspx?21,13
+
+- name: Образование
+  links:
+    - url: https://um.edu.uy/
+      description: егосударственный институт
+    - url: www.ceip.edu.uy
+      description: Отдел начального образования
+    - url: www.ces.edu.uy
+      description: Отдел среднего образования
+    - url: www.asse.com.uy
+      description: Гос. система здравоохранения
+    - url: www.bps.gub.uy
+      description: Гос. фонд соц. страхования
+
+- name: Местные фин. организации выдающие гарантии для долгосрочной аренды
+  links:
+    - url: www.anda.com.uy
+    - url: www.portoseguro.com.uy
+    - url: www.anv.com.uy

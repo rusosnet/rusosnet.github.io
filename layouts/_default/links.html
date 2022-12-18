@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+{{ range $key, $value := .Site.Data.links }}
+
+<div class="mb-5">
+  <h2 class="font-bold text-xl">{{ .name }}</h2>
+
+  <ul class="list-disc ml-5">
+  {{ range $key, $value := .links }}
+    <li>
+      {{ $name := .name }}
+      {{ if not $name }}{{ $name = .url }}{{ end }}
+      <a href="{{ .url }}" rel="nofollow" target="_blank">{{ $name }}</a>
+      <div>{{ .description | markdownify }}</div>
+    </li>
+  {{ end }}
+  </ul>
+</div>
+
+{{ end }}
+
+{{ end }}
