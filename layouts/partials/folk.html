@@ -1,0 +1,18 @@
+{{ if .Params.folk }}
+
+{{ with .Site.GetPage (printf "/folks/%s" .Params.folk) }}
+
+<div class="my-5 rounded bg-slate-100 p-3">
+  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  <div>{{ delimit .Params.categories "," }}</div>
+  <div>{{ .Summary }}</div>
+  {{ if .Params.telegramUsername }}
+  <div>
+    Telegram: <a href="https://t.me/{{ .Params.telegramUsername }}">@{{ .Params.telegramUsername }}</a>
+  </div>
+  {{ end }}
+</div>
+
+{{ end }}
+
+{{ end }}

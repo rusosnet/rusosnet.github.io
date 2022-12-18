@@ -1,8 +1,7 @@
 ---
 title: Миграционные вопросы
 date: 2022-12-17T22:53:50-03:00
-author: Екатерина Германович
-tgUsername: omniomea
+folk: omniomea
 tags:
  - Документы
 ---
