@@ -6,7 +6,7 @@
 
 {{ $places := slice }}
 
-{{ range .Pages }}
+{{ range .Pages.ByPublishDate.Reverse }}
 {{ $places = $places | append (dict
   "coords" (slice (float (index .Params.coords 0)) (float (index .Params.coords 1)))
   "name" .Params.title
