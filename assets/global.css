@@ -15,7 +15,11 @@ h1 {
 }
 
 .markdow ul {
-  @apply list-disc ml-5
+  @apply list-disc ml-5 my-5
+}
+
+.markdow ol {
+  @apply list-decimal ml-5 my-5
 }
 
 .markdow h2 {
