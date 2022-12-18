@@ -23,6 +23,12 @@ googleAnalytics = "G-RWR8YM3FLL"
     weight = 2
 
   [[menu.main]]
+    name = "Материалы"
+    pre = "blog"
+    url = "/posts/"
+    weight = 2
+
+  [[menu.main]]
     name = "TG Каналы"
     pre = "blog"
     url = "/tgchannels/"
