@@ -54,6 +54,12 @@ googleAnalytics = "G-RWR8YM3FLL"
     weight = 4
 
   [[menu.main]]
+    name = "FAQ"
+    pre = "blog"
+    url = "/faqs/"
+    weight = 5
+
+  [[menu.main]]
     name = "О проекте"
     pre = "blog"
     url = "/about/"

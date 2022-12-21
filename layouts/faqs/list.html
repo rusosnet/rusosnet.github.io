@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+<div class="max-h-0"><!-- show .max-h-0 for the tailwindcss preprocesor --></div>
+
+{{ range .Pages.ByPublishDate.Reverse }}
+
+<div class="my-2" data-type="faq-item">
+  <h3 data-section="title" class="font-bold mb-2 flex items-center cursor-pointer">
+    <span class="flex-1">{{ .Title }}</span>
+  </h3>
+  <div class="markdow">{{ .Content }}</div>
+</div>
+
+{{ end }}
+
+{{ end }}
