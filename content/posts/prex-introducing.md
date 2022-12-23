@@ -18,6 +18,15 @@ tags:
 3. Дождаться подтверждение регистрации
 4. Сходить в ближайший Abitab и забрать карту по паспорту
 
+Доходы можно подтвердить не дожидаясь блокировки. Написать про желание в
+чат, просят такой список документов:
+
+ - Registro completo y firmado, del formulario el cual adjunto
+ - Copia de constancia de domicilio a tu nombre (recibo de UTE, ANTEL, OSE, etc.)
+ - Documentación formal de ingresos (recibo de sueldo, certificado de ingresos realizado por Contador, etc., según corresponda)
+ - Foto del frente y dorso de la cédula de identidad vigente
+ - Detalle escrito de principales usos de su cuenta y procedencia de las cargas
+
 Нюансы:
 
  - если в качестве документа паспорт, а не седула, то надо фоткать не в приложении, а отдельно, камерой и потом уже подгружать фотографии
