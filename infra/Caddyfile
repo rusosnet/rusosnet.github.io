@@ -1,5 +1,8 @@
-rusos.net
+rusos.net {
+  encode zstd gzip
+  reverse_proxy https://rusosnet.github.io
+}
 
-encode zstd gzip
-
-reverse_proxy https://rusosnet.github.io
+www.rusos.net {
+  redir https://rusos.net{uri}
+}
