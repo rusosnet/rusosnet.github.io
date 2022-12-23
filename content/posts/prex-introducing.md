@@ -2,6 +2,9 @@
 title: Prex — дебетовая карта без заморочек
 date: 2022-12-23T13:56:03-03:00
 source: https://www.prexcard.com/
+playStoreUrl: https://play.google.com/store/apps/details?id=air.Prex&hl=es_UY
+appleStoreUrl: https://apps.apple.com/uy/app/prex-card/id927400689?l=es
+huaweiGalleryUrl: https://appgallery.huawei.com/#/app/C101978921
 tags:
   - Банки
   - Деньги

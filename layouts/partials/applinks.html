@@ -1,0 +1,22 @@
+<div class="flex">
+
+  {{ if .Params.playStoreUrl }}
+  <a href="{{ .Params.playStoreUrl }}">
+    <img src="/apps/plastore.svg" alt="Link to Play Store" class="w-36 mr-2" />
+  </a>
+  {{ end }}
+
+  {{ if .Params.appleStoreUrl }}
+  <a href="{{ .Params.appleStoreUrl }}">
+    <img src="/apps/applestore.svg" alt="Link to Apple Store" class="w-36 mr-2" />
+  </a>
+  {{ end }}
+
+  {{ if .Params.huaweiGalleryUrl }}
+  <a href="{{ .Params.huaweiGalleryUrl }}">
+    <img src="/apps/huaweigallery.svg" alt="Link to Huawei Gallery" class="w-36 mr-2" />
+  </a>
+  {{ end }}
+
+  <div class="flex-1"></div>
+</div>
