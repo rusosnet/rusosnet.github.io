@@ -21,10 +21,10 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLnZw1h5OQ3fHmtgYvpnOMAZ71jx3hN7Q&callback=initMap&v=weekly" data-turbolinks-eval="false" defer></script>
 
 {{ range $key, $value := .Pages.ByPublishDate.Reverse }}
-<p>
+<div class="my-3">
   <a href="{{ .RelPermalink }}" data-jump="{{ $key }}">{{ .Title }}</a>
   <div>{{ .Summary }}</div>
-</p>
+</div>
 {{ end }}
 
 {{ end }}
