@@ -10,24 +10,32 @@ h1 {
   @apply font-bold text-2xl my-5
 }
 
-.markdow p {
+.markdown p {
   @apply my-3
 }
 
-.markdow ul {
+.markdown ul {
   @apply list-disc ml-5 my-5
 }
 
-.markdow ol {
+.markdown ol {
   @apply list-decimal ml-5 my-5
 }
 
-.markdow h2 {
+.markdown h2 {
   @apply font-bold text-2xl my-3
 }
 
-.markdow h3 {
+.markdown h3 {
   @apply font-bold text-xl my-2
+}
+
+.markdown blockquote {
+  border-left: 3px solid;
+  border-color: #ffbb42;
+  font-style: italic;
+  margin: 16px 0 24px;
+  padding: 0 16px 0 24px;
 }
 
 .circle-arrow {
