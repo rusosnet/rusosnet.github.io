@@ -12,6 +12,7 @@ document.addEventListener('turbo:load', () => {
 
   // Change the icons inside the button based on previous settings
   if (localStorage.getItem(STORAGE_KEY) === 'dark' || isSystemDark) {
+    rootEl.classList.add('dark');
     lightIcon.classList.remove('hidden');
   } else {
     darkIcon.classList.remove('hidden');

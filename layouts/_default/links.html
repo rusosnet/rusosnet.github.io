@@ -9,7 +9,7 @@
 
   <ul class="list-disc ml-5">
   {{ range $key, $value := .links }}
-    <li>
+    <li class="markdown">
       {{ $name := .name }}
       {{ if not $name }}{{ $name = .url }}{{ end }}
       <a href="{{ .url }}" rel="nofollow" target="_blank">{{ $name }}</a>
