@@ -1,9 +1,26 @@
-{{ partial "head.html" . }}
+{{ define "main" }}
 
-<body>
-  <div class="p-10">
-    Work in progress...
-    <br />
-    Stay tuned: <a href="https://t.me/rusosnet">https://t.me/rusosnet</a>
+<main aria-role="main">
+  <div class="homepage-content">{{.Content}}</div>
+
+  <h2 class="my-4 text-2xl font-bold">Основные разделы</h2>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    {{ range .Site.Menus.main }}
+    {{ if isset .Params "description" }}
+    <a
+      href="{{ .URL }}"
+      class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+    >
+      <h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">
+        {{ .Name | safeHTML }}
+      </h5>
+      {{ with .Params.description }}
+      <p class="font-normal text-gray-700 dark:text-gray-400">{{ . | safeHTML }}</p>
+      {{ end }}
+    </a>
+    {{ end }}
+    {{ end }}
   </div>
-</body>
+</main>
+
+{{ end }}

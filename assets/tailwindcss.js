@@ -19,10 +19,7 @@ document.addEventListener('turbo:load', () => {
 
   const toggleBtn = document.getElementById('theme-toggle');
 
-  console.log('setup');
-
   toggleBtn.addEventListener('click', function () {
-    console.log('toggle');
     // toggle icons inside button
     darkIcon.classList.toggle('hidden');
     lightIcon.classList.toggle('hidden');

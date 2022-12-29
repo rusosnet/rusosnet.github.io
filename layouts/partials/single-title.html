@@ -1,6 +1,8 @@
-<div class="my-5">
+<div class="my-5 markdown">
   {{ with .Parent }}
+  {{ if not .IsHome }}
   <a href="{{ .Permalink }}">{{ .Title }}</a> &rsaquo;
+  {{ end }}
   {{ end }}
   <h1 class="my-0">{{ .Title }}</h1>
 </div>

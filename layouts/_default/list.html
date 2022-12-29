@@ -4,8 +4,7 @@
 
 {{ range .Pages.ByPublishDate.Reverse }}
 {{ $dateTime := .PublishDate.Format "2006-01-02" }}
-
-<p class="my-2">
+<p class="my-2 markdown">
   <time datetime="{{ $dateTime }}">{{ .PublishDate | time.Format ":date_long" }}</time>
   <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }}</a>
 </p>

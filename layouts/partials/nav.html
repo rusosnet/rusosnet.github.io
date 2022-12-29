@@ -39,6 +39,7 @@
         class="flex flex-col border-t p-2 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
       >
         {{ range .Site.Menus.main }}
+        {{ if not (isset .Params "extended") }}
         <li>
           <a
             href="{{ .URL }}"
@@ -47,6 +48,7 @@
             >{{ .Name | safeHTML }}</a
           >
         </li>
+        {{ end }}
         {{ end }}
       </ul>
     </div>

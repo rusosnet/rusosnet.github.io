@@ -22,45 +22,64 @@ googleAnalytics = "G-RWR8YM3FLL"
     pre = "blog"
     url = "/news/"
     weight = 2
+    [menu.main.params]
+      description = "Вдали от СНГ новостной фон не такой сильный, но тут важные для эмигрантов собирает"
 
   [[menu.main]]
     name = "События"
     pre = "blog"
     url = "/events/"
     weight = 2
+    [menu.main.params]
+      description = "Встречи, вечеринки и другие события, которые можно посетить лично"
 
   [[menu.main]]
     name = "Материалы"
     pre = "blog"
     url = "/posts/"
     weight = 2
+    [menu.main.params]
+      description = "Авторские статьи по конретной теме. Хорошо раскрытые темы"
 
   [[menu.main]]
     name = "Места"
     pre = "blog"
     url = "/places/"
     weight = 2
+    [menu.main.params]
+      description = "Карта с отметками от сообщества и отзывами"
 
-  # [[menu.main]]
-  #   name = "TG Каналы"
-  #   pre = "blog"
-  #   url = "/tgchannels/"
-  #   weight = 3
-  #
-  # [[menu.main]]
-  #   name = "Полезные ссылки"
-  #   pre = "blog"
-  #   url = "/links/"
-  #   weight = 4
+  [[menu.main]]
+    name = "TG Каналы"
+    pre = "blog"
+    url = "/tgchannels/"
+    weight = 3
+    [menu.main.params]
+      extended = true
+      description = "Список известных каналов и чатов. Общих и персональных"
+
+  [[menu.main]]
+    name = "Полезные ссылки"
+    pre = "blog"
+    url = "/links/"
+    weight = 4
+    [menu.main.params]
+      extended = true
+      description = "Местные популярные ресурсы. От гос порталов до досок объявлений"
 
   [[menu.main]]
     name = "FAQ"
     pre = "blog"
     url = "/faqs/"
     weight = 5
+    [menu.main.params]
+      description = "Короткие ответы на часто задаваемые вопросы"
 
-  # [[menu.main]]
-  #   name = "О проекте"
-  #   pre = "blog"
-  #   url = "/about/"
-  #   weight = 5
+  [[menu.main]]
+    name = "О проекте"
+    pre = "blog"
+    url = "/about/"
+    weight = 5
+    [menu.main.params]
+      extended = true
+      description = "Расскажем как сделан сайт, как добавить контент и подобное"

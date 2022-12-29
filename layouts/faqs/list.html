@@ -6,8 +6,8 @@
 
 {{ range .Pages.ByPublishDate.Reverse }}
 
-<div class="my-2" data-type="faq-item">
-  <h3 data-section="title" class="font-bold mb-2 flex items-center cursor-pointer">
+<div class="my-8" data-type="faq-item">
+  <h3 data-section="title" class="font-bold flex items-center">
     <span class="flex-1">{{ .Title }}</span>
   </h3>
   <div class="markdown">{{ .Content }}</div>
