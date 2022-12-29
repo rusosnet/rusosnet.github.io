@@ -1,0 +1,6 @@
+<div class="my-5">
+  {{ with .Parent }}
+  <a href="{{ .Permalink }}">{{ .Title }}</a> &rsaquo;
+  {{ end }}
+  <h1 class="my-0">{{ .Title }}</h1>
+</div>

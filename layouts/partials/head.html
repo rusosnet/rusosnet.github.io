@@ -23,4 +23,7 @@
 {{ $turbo := resources.Get "turbo.js" | js.Build $opts | minify | fingerprint }}
 <script src="{{ $turbo.RelPermalink }}" defer></script>
 
+{{ $js := resources.Get "tailwindcss.js" | js.Build | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>
+
 {{ template "_internal/opengraph.html" . }}

@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<h1>{{ .Title }}</h1>
+{{ partial "single-title.html" . }}
 
 {{ if .Params.poster }}
 <img src="{{ .Params.poster }}" alt="{{ .Title }}" class="max-w-3xl w-full rounded" />

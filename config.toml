@@ -41,17 +41,17 @@ googleAnalytics = "G-RWR8YM3FLL"
     url = "/places/"
     weight = 2
 
-  [[menu.main]]
-    name = "TG Каналы"
-    pre = "blog"
-    url = "/tgchannels/"
-    weight = 3
-
-  [[menu.main]]
-    name = "Полезные ссылки"
-    pre = "blog"
-    url = "/links/"
-    weight = 4
+  # [[menu.main]]
+  #   name = "TG Каналы"
+  #   pre = "blog"
+  #   url = "/tgchannels/"
+  #   weight = 3
+  #
+  # [[menu.main]]
+  #   name = "Полезные ссылки"
+  #   pre = "blog"
+  #   url = "/links/"
+  #   weight = 4
 
   [[menu.main]]
     name = "FAQ"
@@ -59,8 +59,8 @@ googleAnalytics = "G-RWR8YM3FLL"
     url = "/faqs/"
     weight = 5
 
-  [[menu.main]]
-    name = "О проекте"
-    pre = "blog"
-    url = "/about/"
-    weight = 5
+  # [[menu.main]]
+  #   name = "О проекте"
+  #   pre = "blog"
+  #   url = "/about/"
+  #   weight = 5

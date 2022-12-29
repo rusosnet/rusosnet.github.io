@@ -3,11 +3,13 @@
 <html lang="ru">
   {{ partial "head.html" . }}
 
-  <body>
+  <body class="dark:bg-gray-900 text-gray-800 dark:text-gray-400">
     {{ partial "nav.html" . }}
 
     <main class="px-5 my-5">
-      {{ block "main" . }}{{ end }}
+      <div class="container mx-auto">
+        {{ block "main" . }}{{ end }}
+      </div>
     </main>
   </body>
 </html>
