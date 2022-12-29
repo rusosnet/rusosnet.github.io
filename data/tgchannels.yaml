@@ -2,7 +2,7 @@
   description: Разнообразная информация про жизнь в Уругвае
 
 - name: it_in_uy
-  description: Чат для айтишников от @rusuru
+  description: Чат для айтишников
 
 - name: immigratsiaUruguay
   description: Обещают помочь Вам с иммиграцией в Уругвай и тп
@@ -15,9 +15,6 @@
 
 - name: arendauru
   description: Квартиры от местного русскоговорящего риэлтора
-
-- name: rusuru
-  description: Разнообразная информация про жизнь в Уругвае
 
 - name: lifehacks_uy
   description: Лайфхаки от @rusuru
