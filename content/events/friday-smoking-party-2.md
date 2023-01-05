@@ -1,5 +1,5 @@
 ---
-title: Friday Smoking Party №2
+title: Smoke & Talk Party №2
 date: 2022-12-23T17:33:52-03:00
 tags:
   - Поситос

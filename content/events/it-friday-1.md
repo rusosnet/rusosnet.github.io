@@ -1,5 +1,5 @@
 ---
-title: Friday Smoking party №1
+title: Smoke & Talk Party №1
 date: 2022-12-16T19:00:00-03:00
 personCount: 7
 tags:
