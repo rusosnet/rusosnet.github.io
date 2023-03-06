@@ -13,6 +13,9 @@
 - name: uruguay_parents
   description: Группа для русскоговорящих родителей
 
+- name: chinosworkouts
+  description: Workout chikos 💪💪 9-13 лет в Монтевидео
+
 - name: arendauru
   description: Квартиры от местного русскоговорящего риэлтора
 
@@ -26,9 +29,6 @@
   description: Клуб настольных игр в Монтевидео
 
 - name: snlmp
-  description: Персональный блог
-
-- name: uru_guru
   description: Персональный блог
 
 - name: verkinder
