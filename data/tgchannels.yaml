@@ -22,6 +22,9 @@
 - name: espanolgram
   description: Изучение испанского
 
+- name: boardgamesMontevideo
+  description: Клуб настольных игр в Монтевидео
+
 - name: snlmp
   description: Персональный блог
 
