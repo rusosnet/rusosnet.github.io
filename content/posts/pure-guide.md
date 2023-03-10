@@ -1,6 +1,7 @@
 ---
 title: Нищегайд Переезд в Уругвай
 date: 2023-03-09T22:04:33-03:00
+folk: deepersonal
 tags: []
 draft: false
 ---
