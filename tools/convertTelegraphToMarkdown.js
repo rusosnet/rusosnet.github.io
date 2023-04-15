@@ -43,16 +43,9 @@ const formatDate = (date) => {
 const generateMetaMarkdown = (title, meta, filePath) => {
   const obj = {
     title,
-    ...meta,
     date: formatDate(new Date()),
+    ...meta,
   };
-
-  if (fs.existsSync(filePath)) {
-    const file = fs.readFileSync(filePath, 'utf-8');
-    obj.date = file.match(/date: (.*)/)[1];
-  } else {
-    obj.date = formatDate(new Date());
-  }
 
   let res = '---\n';
 
@@ -141,14 +134,19 @@ Object.keys(config).forEach((dir) => {
   config[dir].forEach(async (configItem) => {
     try {
       const telegraphPagePath = getPathFromUrl(configItem.url);
-      const telegraphPage = await getTelegraphPage(telegraphPagePath);
       const filePath = `content/${dir}/${telegraphPagePath}.md`;
 
-      const md =
-        generateMetaMarkdown(telegraphPage.title, configItem.meta, filePath) +
-        generateContentMarkdown(telegraphPage.content);
+      if (!fs.existsSync(filePath)) {
+        const telegraphPage = await getTelegraphPage(telegraphPagePath);
 
-      fs.writeFileSync(filePath, md);
+        const md =
+          generateMetaMarkdown(telegraphPage.title, configItem.meta) +
+          generateContentMarkdown(telegraphPage.content);
+
+        fs.writeFileSync(filePath, md);
+
+        console.log(`File ${filePath} generated!`);
+      }
     } catch (err) {
       console.error(err);
     }
