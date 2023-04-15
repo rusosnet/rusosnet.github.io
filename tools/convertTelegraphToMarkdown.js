@@ -1,7 +1,9 @@
 const config = require('../external-content.json');
 const fs = require('fs');
+const url = require('url');
 
-const getPathFromUrl = (url) => url.split('https://telegra.ph/')[1];
+// slice(1) for remove "/" at the start of pathname for convenience
+const getPathFromUrl = (href) => url.parse(href).pathname.slice(1);
 
 const getTelegraphPage = async (path) => {
   const res = await fetch(`https://api.telegra.ph/getPage/${path}?return_content=true`);
