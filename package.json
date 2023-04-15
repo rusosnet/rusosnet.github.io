@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "build-tw": "yarn tailwindcss -i ./assets/global.css -o ./assets/global.out.css"
+    "build-tw": "yarn tailwindcss -i ./assets/global.css -o ./assets/global.out.css",
+    "extract-telegraph": "node ./tools/convertTelegraphToMarkdown.js"
   },
   "dependencies": {
     "@hotwired/turbo": "^7.2.4",
