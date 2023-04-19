@@ -41,7 +41,7 @@ const formatDate = (date) => {
   );
 };
 
-const generateMetaMarkdown = (title, meta, filePath) => {
+const generateMetaMarkdown = (title, meta) => {
   const obj = {
     title,
     date: formatDate(new Date()),
