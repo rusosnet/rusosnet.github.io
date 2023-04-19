@@ -156,7 +156,7 @@ Object.keys(config).forEach((dir) => {
   config[dir].forEach(async (configItem) => {
     try {
       const telegraphPagePath = getPathFromUrl(configItem.url);
-      const filePath = `content/${dir}/${configItem.slug ?? telegraphPagePath}.md`;
+      const filePath = `content/${dir}/${configItem.slug || telegraphPagePath}.md`;
 
       if (!fs.existsSync(filePath)) {
         const telegraphPage = await getTelegraphPage(telegraphPagePath);
