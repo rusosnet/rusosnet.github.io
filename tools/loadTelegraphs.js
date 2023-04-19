@@ -105,7 +105,7 @@ const convertTagToMarkdown = (prevRes, node, parentTag, idx) => {
     case 'i':
       return fixWhiteSpaces(prevRes, '*');
     case 'figcaption':
-      return `\n\n${prevRes}`;
+      return prevRes ? `\n\n${prevRes}` : '';
     case 'img':
       loadFile(node.attrs.src);
       return `![картинка](${getFilePath(node.attrs.src)})`;
