@@ -64,13 +64,8 @@ const generateMetaMarkdown = (title, meta, filePath) => {
   return res + '---\n\n';
 };
 
-const fixWhiteSpaces = (str, wrapWith) => {
-  const startPart = /^\s/.test(str) ? ' ' : '';
-  const mainPart = wrapWith + str.trim() + wrapWith;
-  const endPart = /\s$/.test(str) ? ' ' : '';
-
-  return startPart + mainPart + endPart;
-};
+const fixWhiteSpaces = (str, wrapWith) =>
+  str.replace(/^(\s*)(.*?)(\s*)$/gm, ['$1', '$2', '$3'].join(wrapWith));
 
 const convertTagToMarkdown = (prevRes, node, parentTag, idx) => {
   switch (node.tag) {
