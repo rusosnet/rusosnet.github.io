@@ -1,6 +1,7 @@
 const config = require('../external-content.json');
 const fs = require('fs');
 const url = require('url');
+const https = require('https');
 
 // slice(1) for remove "/" at the start of pathname for convenience
 const getPathFromUrl = (href) => url.parse(href).pathname.slice(1);
@@ -67,6 +68,23 @@ const generateMetaMarkdown = (title, meta, filePath) => {
 const fixWhiteSpaces = (str, wrapWith) =>
   str.replace(/^(\s*)(.*?)(\s*)$/gm, ['$1', '$2', '$3'].join(wrapWith));
 
+const getFilePath = (src) => src.replace('file', 'telegraph');
+
+const loadFile = (src) => {
+  const filePath = 'static' + getFilePath(src);
+  const file = fs.createWriteStream(filePath);
+
+  https
+    .get(`https://telegra.ph${src}`, (res) => {
+      res.pipe(file);
+      file.on('finish', file.close);
+    })
+    .on('error', (err) => {
+      fs.unlink(file, (err) => err && console.error(err));
+      console.error(err);
+    });
+};
+
 const convertTagToMarkdown = (prevRes, node, parentTag, idx) => {
   switch (node.tag) {
     case 'p':
@@ -88,7 +106,8 @@ const convertTagToMarkdown = (prevRes, node, parentTag, idx) => {
     case 'figcaption':
       return `\n\n${prevRes}`;
     case 'img':
-      return `![картинка](https://telegra.ph${node.attrs.src})`;
+      loadFile(node.attrs.src);
+      return `![картинка](${getFilePath(node.attrs.src)})`;
     case 'h3':
       return `### ${prevRes}\n\n`;
     case 'h4':
