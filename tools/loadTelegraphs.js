@@ -46,7 +46,7 @@ const generateMetaMarkdown = (title, url, meta) => {
     title,
     date: formatDate(new Date()),
     ...meta,
-    source: meta.source || url,
+    source: meta?.source || url,
   };
 
   let res = '---\n';
