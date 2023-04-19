@@ -72,7 +72,7 @@ const fixWhiteSpaces = (str, wrapWith) => {
   return startPart + mainPart + endPart;
 };
 
-const convertTagToMarkdown = (prevRes, node, parentTag) => {
+const convertTagToMarkdown = (prevRes, node, parentTag, idx) => {
   switch (node.tag) {
     case 'p':
     case 'figure':
@@ -104,7 +104,7 @@ const convertTagToMarkdown = (prevRes, node, parentTag) => {
     case 'ol':
       return `${prevRes}\n`;
     case 'li':
-      return parentTag === 'ul' ? `- ${prevRes}\n` : `1. ${prevRes}\n`;
+      return parentTag === 'ul' ? `- ${prevRes}\n` : `${idx + 1}. ${prevRes}\n`;
     case 'pre':
       return '```\n' + prevRes + '```' + '\n\n';
     case 's':
@@ -116,17 +116,17 @@ const convertTagToMarkdown = (prevRes, node, parentTag) => {
   }
 };
 
-const convertNodeToMarkdown = (node, parentTag) => {
+const convertNodeToMarkdown = (node, parentTag, idx) => {
   let res = '';
 
   if (typeof node === 'object' && node.children) {
-    res += node.children.map((v) => convertNodeToMarkdown(v, node.tag)).join('');
+    res += node.children.map((v, i) => convertNodeToMarkdown(v, node.tag, i)).join('');
   }
 
   if (typeof node === 'string') {
     res += node;
   } else {
-    res = convertTagToMarkdown(res, node, parentTag);
+    res = convertTagToMarkdown(res, node, parentTag, idx);
   }
 
   return res;
