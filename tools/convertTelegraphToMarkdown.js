@@ -64,6 +64,14 @@ const generateMetaMarkdown = (title, meta, filePath) => {
   return res + '---\n\n';
 };
 
+const fixWhiteSpaces = (str, wrapWith) => {
+  const startPart = /^\s/.test(str) ? ' ' : '';
+  const mainPart = wrapWith + str.trim() + wrapWith;
+  const endPart = /\s$/.test(str) ? ' ' : '';
+
+  return startPart + mainPart + endPart;
+};
+
 const convertTagToMarkdown = (prevRes, node, parentTag) => {
   switch (node.tag) {
     case 'p':
@@ -74,14 +82,14 @@ const convertTagToMarkdown = (prevRes, node, parentTag) => {
       return `[${prevRes}](${node.attrs.href})`;
     case 'b':
     case 'strong':
-      return `**${prevRes}**`;
+      return fixWhiteSpaces(prevRes, '**');
     case 'blockquote':
       return `> ${prevRes}\n\n`;
     case 'code':
-      return '`' + prevRes + '`';
+      return fixWhiteSpaces(prevRes, '`');
     case 'em':
     case 'i':
-      return `*${prevRes}*`;
+      return fixWhiteSpaces(prevRes, '*');
     case 'figcaption':
       return `\n\n${prevRes}`;
     case 'img':
@@ -100,7 +108,7 @@ const convertTagToMarkdown = (prevRes, node, parentTag) => {
     case 'pre':
       return '```\n' + prevRes + '```' + '\n\n';
     case 's':
-      return `~~${prevRes}~~`;
+      return fixWhiteSpaces(prevRes, '~~');
     case 'u':
       return prevRes;
     default:
