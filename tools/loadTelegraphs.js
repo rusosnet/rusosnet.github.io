@@ -41,11 +41,12 @@ const formatDate = (date) => {
   );
 };
 
-const generateMetaMarkdown = (title, meta) => {
+const generateMetaMarkdown = (title, url, meta) => {
   const obj = {
     title,
     date: formatDate(new Date()),
     ...meta,
+    source: meta.source || url,
   };
 
   let res = '---\n';
@@ -162,7 +163,7 @@ Object.keys(config).forEach((dir) => {
         const telegraphPage = await getTelegraphPage(telegraphPagePath);
 
         const md =
-          generateMetaMarkdown(telegraphPage.title, configItem.meta) +
+          generateMetaMarkdown(telegraphPage.title, configItem.url, configItem.meta) +
           generateContentMarkdown(telegraphPage.content);
 
         fs.writeFileSync(filePath, md);
