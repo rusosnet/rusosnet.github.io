@@ -43,6 +43,11 @@ h1 {
   padding: 0 16px 0 24px;
 }
 
+.markdown img {
+  width: 100%;
+  max-width: 690px;
+}
+
 .circle-arrow {
   @apply text-purple-700 h-6 w-6 transform transition-transform duration-500 mr-2;
   display: inline-block;
