@@ -1,7 +1,7 @@
-const config = require('../external-content.json');
 const fs = require('fs');
 const url = require('url');
 const https = require('https');
+const config = require('../external-content.json');
 
 // slice(1) for remove "/" at the start of pathname for convenience
 const getPathFromUrl = (href) => url.parse(href).pathname.slice(1);
