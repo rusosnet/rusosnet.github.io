@@ -163,9 +163,7 @@ Object.keys(config).forEach((dir) => {
 
       if (!fs.existsSync(filePath)) {
         const telegraphPage = await getTelegraphPage(telegraphPagePath);
-
         fs.writeFileSync(filePath, generateMarkdown(telegraphPage, configItem));
-
         console.log(`File ${filePath} generated!`);
       }
     } catch (err) {
