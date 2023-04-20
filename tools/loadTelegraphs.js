@@ -41,19 +41,17 @@ const formatDate = (date) => {
   );
 };
 
-const generateMetaMarkdown = (title, url, meta) => {
-  const obj = {
+const generateMetaMarkdown = (title, configItem) => {
+  const data = {
     title,
     date: formatDate(new Date()),
-    ...meta,
-    source: meta?.source || url,
+    ...configItem.meta,
+    source: configItem.meta?.source || configItem.url,
   };
 
-  let res = '---\n';
+  let res = '';
 
-  Object.keys(obj).forEach((key) => {
-    const val = obj[key];
-
+  Object.entries(data).forEach(([key, val]) => {
     if (key === 'coords') {
       res += `coords: ${JSON.stringify(val)}\n`;
     } else if (Array.isArray(val)) {
@@ -63,7 +61,7 @@ const generateMetaMarkdown = (title, url, meta) => {
     }
   });
 
-  return res + '---\n\n';
+  return '---\n' + res + '---\n\n';
 };
 
 const fixWhiteSpaces = (str, wrapWith) =>
@@ -163,7 +161,7 @@ Object.keys(config).forEach((dir) => {
         const telegraphPage = await getTelegraphPage(telegraphPagePath);
 
         const md =
-          generateMetaMarkdown(telegraphPage.title, configItem.url, configItem.meta) +
+          generateMetaMarkdown(telegraphPage.title, configItem) +
           generateContentMarkdown(telegraphPage.content);
 
         fs.writeFileSync(filePath, md);
