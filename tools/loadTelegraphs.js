@@ -151,6 +151,10 @@ const generateContentMarkdown = (content) =>
     .join('')
     .trim();
 
+const generateMarkdown = (telegraphPage, configItem) =>
+  generateMetaMarkdown(telegraphPage.title, configItem) +
+  generateContentMarkdown(telegraphPage.content);
+
 Object.keys(config).forEach((dir) => {
   config[dir].forEach(async (configItem) => {
     try {
@@ -160,11 +164,7 @@ Object.keys(config).forEach((dir) => {
       if (!fs.existsSync(filePath)) {
         const telegraphPage = await getTelegraphPage(telegraphPagePath);
 
-        const md =
-          generateMetaMarkdown(telegraphPage.title, configItem) +
-          generateContentMarkdown(telegraphPage.content);
-
-        fs.writeFileSync(filePath, md);
+        fs.writeFileSync(filePath, generateMarkdown(telegraphPage, configItem));
 
         console.log(`File ${filePath} generated!`);
       }
