@@ -3,5 +3,5 @@ hugo server -D
 ```
 
 ```bash
-yarn build-tw --watch
+yarn && yarn build-tw --watch
 ```
