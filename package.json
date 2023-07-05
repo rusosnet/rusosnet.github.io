@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "build-tw": "yarn tailwindcss -i ./assets/global.css -o ./assets/global.out.css"
+    "build-tw": "yarn tailwindcss -i ./assets/global.css -o ./assets/global.out.css",
+    "extract-telegraph": "node tools/loadTelegraphs.js"
   },
   "dependencies": {
     "@hotwired/turbo": "^7.2.4",
@@ -9,6 +10,7 @@
     "flowbite": "^1.5.5",
     "postcss": "^8.4.20",
     "postcss-cli": "^10.1.0",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.4",
+    "telegraph2md": "^1.0.0"
   }
 }
