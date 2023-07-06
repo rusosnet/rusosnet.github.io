@@ -34,5 +34,11 @@
 - name: verkinder
   description: Персональный блог
 
+- name: uporys_uruguay
+  description: Персональный блог
+
+- name: bocetosU
+  description: Наброски о жизни искусствоведа
+
 - name: tecnicadelibertad
   description: DIY в Уругвае
