@@ -38,6 +38,7 @@ h1 {
 .markdown img {
   width: 100%;
   max-width: 690px;
+  border-radius: 4px;
 }
 
 .markdown blockquote {
