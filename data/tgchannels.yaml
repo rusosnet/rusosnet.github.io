@@ -1,3 +1,6 @@
+- name: urutechunion
+  description: Местная ИТ тусовка
+
 - name: russianinuruguay
   description: Разнообразная информация про жизнь в Уругвае
 
@@ -45,3 +48,6 @@
 
 - name: tecnicadelibertad
   description: DIY в Уругвае
+
+- name: doncambiouru
+  description: Крипто обменник
