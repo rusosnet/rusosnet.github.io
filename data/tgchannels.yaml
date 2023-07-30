@@ -1,6 +1,9 @@
 - name: urutechunion
   description: Местная ИТ тусовка
 
+- name: mercado_de_pulgas
+  description: Барахолка
+
 - name: russianinuruguay
   description: Разнообразная информация про жизнь в Уругвае
 
@@ -45,6 +48,9 @@
 
 - name: bocetosU
   description: Наброски о жизни искусствоведа
+
+- name: urugvasha
+  description: Персональный блог
 
 - name: tecnicadelibertad
   description: DIY в Уругвае
