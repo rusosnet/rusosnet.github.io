@@ -8,7 +8,7 @@
       />
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white leading-none">
         Rusos<br />
-        <span class="text-xs">В Уругвае</span>
+        <span class="text-xs">{{ or (T "in_uru") "В Уругвае" }}</span>
       </span>
     </a>
     {{ partial "theme-switcher.html" . }}
@@ -42,11 +42,19 @@
         {{ if not (isset .Params "extended") }}
         <li>
           <a
-            href="{{ .URL }}"
+            href="{{ absLangURL .URL }}"
             class="block py-2 pl-3 pr-4 md:p-0"
             aria-current="page"
-            >{{ .Name | safeHTML }}</a
+            >{{ or (T .Identifier) .Name | safeHTML }}</a
           >
+        </li>
+        {{ end }}
+        {{ end }}
+
+        {{ if .IsTranslated }}
+        {{ range .Translations }}
+        <li>
+          <a href="{{ .Permalink }}" class="block py-2 pl-3 pr-4 md:p-0" aria-current="page">{{ .Language.LanguageName }}</a>
         </li>
         {{ end }}
         {{ end }}

@@ -4,6 +4,15 @@ defaultContentLanguage = 'ru'
 title = 'Rusos.net - Русскоговорящие в Уругвае'
 googleAnalytics = "G-RWR8YM3FLL"
 
+[languages]
+  [languages.ru]
+    languageName = "Русский"
+    languageCode = "ru"
+
+  [languages.lat]
+    languageName = "Russkij"
+    languageCode = "lat"
+
 [params]
   dateFormat = "Jan 2, 2006"
 
@@ -12,12 +21,14 @@ googleAnalytics = "G-RWR8YM3FLL"
 
 [menu]
   [[menu.main]]
+    identifier = 'home'
     name = "Главная"
     pre = "home"
     url = "/"
     weight = 1
 
   [[menu.main]]
+    identifier = 'news'
     name = "Новости"
     pre = "blog"
     url = "/news/"
@@ -26,6 +37,7 @@ googleAnalytics = "G-RWR8YM3FLL"
       description = "Вдали от СНГ новостной фон не такой сильный, но тут важные для эмигрантов собирает"
 
   [[menu.main]]
+    identifier = 'events'
     name = "События"
     pre = "blog"
     url = "/events/"
@@ -34,6 +46,7 @@ googleAnalytics = "G-RWR8YM3FLL"
       description = "Встречи, вечеринки и другие события, которые можно посетить лично"
 
   [[menu.main]]
+    identifier = 'posts'
     name = "Материалы"
     pre = "blog"
     url = "/posts/"
@@ -42,6 +55,7 @@ googleAnalytics = "G-RWR8YM3FLL"
       description = "Авторские статьи по конретной теме. Хорошо раскрытые темы"
 
   [[menu.main]]
+    identifier = 'places'
     name = "Места"
     pre = "blog"
     url = "/places/"
@@ -50,6 +64,7 @@ googleAnalytics = "G-RWR8YM3FLL"
       description = "Карта с отметками от сообщества и отзывами"
 
   [[menu.main]]
+    identifier = 'tgchannels'
     name = "TG Каналы"
     pre = "blog"
     url = "/tgchannels/"
@@ -59,6 +74,7 @@ googleAnalytics = "G-RWR8YM3FLL"
       description = "Список известных каналов и чатов. Общих и персональных"
 
   [[menu.main]]
+    identifier = 'links'
     name = "Полезные ссылки"
     pre = "blog"
     url = "/links/"
@@ -68,6 +84,7 @@ googleAnalytics = "G-RWR8YM3FLL"
       description = "Местные популярные ресурсы. От гос порталов до досок объявлений"
 
   [[menu.main]]
+    identifier = 'faq'
     name = "FAQ"
     pre = "blog"
     url = "/faqs/"
@@ -76,6 +93,7 @@ googleAnalytics = "G-RWR8YM3FLL"
       description = "Короткие ответы на часто задаваемые вопросы"
 
   [[menu.main]]
+    identifier = 'about'
     name = "О проекте"
     pre = "blog"
     url = "/about/"

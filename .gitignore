@@ -6,3 +6,4 @@ public
 infra/hosts
 hugo.session
 assets/global.out.css
+*.lat.md

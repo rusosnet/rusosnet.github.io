@@ -29,6 +29,9 @@ jobs:
           hugo-version: 'latest'
           # extended: true
 
+      - name: Latin
+        run: docker run --rm -it -v `pwd`:/site --workdir /site/content alexes/latin bash -c 'find . | grep \.md | grep -v lat.md | /root/process'
+
       - name: Build
         run: yarn build-tw && hugo --minify && echo rusos.net > public/CNAME
 

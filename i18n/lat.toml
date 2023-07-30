@@ -1,0 +1,53 @@
+[in_uru]
+other = 'V Urugvaye'
+
+[home]
+other = 'Glavnaya'
+
+[home-desc]
+other = "Vdali ot SNG novostnoj fon ne takoj siljnyij, no tut vazhnyiye dlya emigrantov sobirayet"
+
+[news]
+other = 'Novosti'
+
+[news-desc]
+other = "Vdali ot SNG novostnoj fon ne takoj siljnyij, no tut vazhnyiye dlya emigrantov sobirayet"
+
+[posts]
+other = 'Materialyi'
+
+[posts-desc]
+other = "Avtorskiye statji po konretnoj teme. Khorosho raskryityiye temyi"
+
+[events]
+other = 'Sobyitiya'
+
+[events-desc]
+other = "Vstrechi, vecherinki i drugiye sobyitiya, kotoryiye mozhno posetitj lichno"
+
+[places]
+other = 'Mesta'
+
+[places-desc]
+other = "Karta s otmetkami ot soobsjhestva i otzyivami"
+
+[tgchannels]
+other = 'TG Kanalyi'
+
+[tgchannels-desc]
+other = "Spisok izvestnyikh kanalov i chatov. Obsjhikh i personaljnyikh"
+
+[links]
+other = 'Poleznyiye ssyilki'
+
+[links-desc]
+other = "Mestnyiye populyarnyiye resursyi. Ot gos portalov do dosok obyyavlenij"
+
+[about]
+other = 'O proyekte'
+
+[about-desc]
+other = "Rasskazhem kak sdelan sajt, kak dobavitj kontent i podobnoye"
+
+[faq-desc]
+other = "Korotkiye otvetyi na chasto zadavayemyiye voprosyi"

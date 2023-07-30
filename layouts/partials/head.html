@@ -11,6 +11,11 @@
 {{ $style := $css | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
+{{ if .IsTranslated }}
+	{{ range .Translations }}
+	<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+	{{ end }}
+{{ end }}
 
 {{ if not .Site.Config.Privacy.GoogleAnalytics.Disable }}
 {{ with .Site.GoogleAnalytics -}}
