@@ -101,3 +101,13 @@ googleAnalytics = "G-RWR8YM3FLL"
     [menu.main.params]
       extended = true
       description = "Расскажем как сделан сайт, как добавить контент и подобное"
+
+  [[menu.main]]
+    identifier = 'guide'
+    name = "Нищегайд"
+    pre = "blog"
+    url = "/pureguide.pdf"
+    weight = 5
+    [menu.main.params]
+      extended = true
+      description = "Оформление документов без посредников и переплат"
