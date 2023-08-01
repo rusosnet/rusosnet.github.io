@@ -75,3 +75,6 @@
 
 - name: uruguay_info
   description: Перевод местных новостей
+
+- name: diasporaURU
+  description: Свободное пространство для помощи и поддержки русскоговорящих эмигрантов.
