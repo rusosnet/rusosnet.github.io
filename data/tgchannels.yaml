@@ -66,3 +66,12 @@
 
 - name: uslugiuruguay
   description: Услуги от экспантов, группа от @immigratsiaUruguay
+
+- name: starkovtoday
+  description: Персональный блог
+
+- name: rumyantseff
+  description: Персональный блог
+
+- name: uruguay_info
+  description: Перевод местных новостей
