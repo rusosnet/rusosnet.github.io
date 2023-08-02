@@ -58,6 +58,9 @@
 - name: doncambiouru
   description: Крипто обменник
 
+- name: MoneyUruguay
+  description: P2P обменник
+
 - name: uru_manual
   description: Полезные советы
 
