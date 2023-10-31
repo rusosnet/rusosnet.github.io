@@ -33,7 +33,7 @@ jobs:
         run: docker run --rm -v `pwd`:/site --workdir /site/content alexes/latin bash -c 'find . | grep \.md | grep -v lat.md | /root/process'
 
       - name: Build
-        run: yarn build-tw && hugo --minify && echo rusos.net > public/CNAME
+        run: yarn build-tw && hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
