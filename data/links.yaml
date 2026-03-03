@@ -1,8 +1,6 @@
 - name: Изучение испанского
   links:
-    - url: https://espagram.ru/
-      description: Сайт со спряжением всех глаголов во всех временах
-    - url: https://castellano.ru/uchebnik
+    - url: https://ru.abriqqi.com/
       description: Учебник кастильского испанского языка.
 
 - name: Покупки
